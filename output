@@ -1,0 +1,75 @@
+Enter your pin:
+5674
+Welcome to the ATM
+1. check A/C Balance
+2. withdraw money
+3. deposit money
+4. pin change
+5. Transaction History
+6. exit
+Enter your choice:
+3
+Enter the amount to deposit:
+50000
+You have deposited: Rs.50000.0
+Welcome to the ATM
+1. check A/C Balance
+2. withdraw money
+3. deposit money
+4. pin change
+5. Transaction History
+6. exit
+Enter your choice:
+2
+Enter amount to withdraw:
+
+25000
+You have withdrawn: Rs.25000.0
+Welcome to the ATM
+1. check A/C Balance
+2. withdraw money
+3. deposit money
+4. pin change
+5. Transaction History
+6. exit
+Enter your choice:
+1
+Your current Balance is: Rs.25000.0
+Welcome to the ATM
+1. check A/C Balance
+2. withdraw money
+3. deposit money
+4. pin change
+5. Transaction History
+6. exit
+Enter your choice:
+3
+Enter the amount to deposit:
+10000
+You have deposited: Rs.10000.0
+Welcome to the ATM
+1. check A/C Balance
+
+2. withdraw money
+3. deposit money
+4. pin change
+5. Transaction History
+6. exit
+Enter your choice:
+1
+Your current Balance is: Rs.35000.0
+Welcome to the ATM
+1. check A/C Balance
+2. withdraw money
+3. deposit money
+4. pin change
+5. Transaction History
+6. exit
+Enter your choice:
+5
+Transaction History:
+Deposit: Rs.50000.0
+Withdrawal: Rs.25000.0
+Balance Inquiry: Rs.25000.0
+Deposit: Rs.10000.0
+Balance Inquiry: Rs.35000.0
