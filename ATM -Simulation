@@ -1,0 +1,120 @@
+import java.util.*;
+class ATM{
+float balance;
+int pin=5674;
+ArrayList<String> transactionhistory=new ArrayList<>();
+public void checkpin(){
+System.out.println("Enter your pin: ");
+Scanner sc=new Scanner(System.in);
+int enteredpin=sc.nextInt();
+if(enteredpin==pin){
+menu();
+}
+else{
+System.out.println("Enter a valid pin");
+}
+}
+public void menu(){
+System.out.println("Welcome to the ATM");
+System.out.println("1. check A/C Balance");
+System.out.println("2. withdraw money");
+System.out.println("3. deposit money");
+
+System.out.println("4. pin change");
+System.out.println("5. Transaction History");
+System.out.println("6. exit");
+System.out.println("Enter your choice:");
+Scanner sc=new Scanner(System.in);
+int opt=sc.nextInt();
+if(opt==1){
+checkbalance();
+}
+else if(opt==2){
+withdrawmoney();
+}
+else if(opt==3){
+depositmoney();
+}
+else if(opt==4){
+pinchange();
+}
+else if(opt==5){
+printtransactionhistory();
+}
+else if(opt==6){
+System.out.println("Thank you for using the ATM. Goodbye!");
+return;
+}
+
+else{
+System.out.println("Enter a valid choice");
+}
+}
+//method to inquire balance
+public void checkbalance(){
+System.out.println("Your current Balance is: Rs."+balance);
+transactionhistory.add("Balance Inquiry: Rs."+balance);
+menu();
+}
+//method to withdraw cash
+public void withdrawmoney(){
+System.out.println("Enter amount to withdraw: ");
+Scanner sc=new Scanner(System.in);
+float amount=sc.nextFloat();
+if(amount>balance){
+System.out.println("Insufficient balance");
+}
+else{
+balance=balance-amount;
+System.out.println("You have withdrawn: Rs."+amount);
+transactionhistory.add("Withdrawal: Rs."+amount);
+}
+menu();
+}
+
+//method to deposit cash
+public void depositmoney(){
+System.out.println("Enter the amount to deposit: ");
+Scanner sc=new Scanner(System.in);
+float amount=sc.nextFloat();
+balance=balance+amount;
+System.out.println("You have deposited: Rs."+amount);
+transactionhistory.add("Deposit: Rs."+amount);
+menu();
+}
+//method to change PIN
+public void pinchange(){
+System.out.println("Enter your current pin: ");
+Scanner sc=new Scanner(System.in);
+int currentpin=sc.nextInt();
+if(currentpin==pin){
+System.out.print("Enter your new PIn: ");
+int newpin=sc.nextInt();
+pin=newpin;
+System.out.println("PIn successfully changed");
+transactionhistory.add("PIN change");
+}
+else{
+System.out.println("Incorrect PIN. Please try again");
+}
+
+}
+//method to print transaction history
+public void printtransactionhistory(){
+if(transactionhistory.isEmpty()){
+System.out.println("No transactions found.");
+}
+else{
+System.out.println("Transaction History: ");
+for (String transaction:transactionhistory){
+System.out.println(transaction);
+}
+}
+}
+}
+public class ATMMachine{
+public static void main(String args[]){
+ATM obj=new ATM();
+obj.checkpin();
+}
+}
